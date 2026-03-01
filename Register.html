@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FareView Registration</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .a {
+            text-align: center;
+            color: aliceblue;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        ul li {
+            float: left;
+        }
+        ul li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        ul li a:hover {
+            background-color: #606e85;
+        }
+        .Shoe {
+            text-align: center;
+            max-width: 1000px;
+            width: 95%;
+            height: auto;
+            background-color: #1e40c9e6;
+            color: white;
+            border: 5px solid #1900ffcb;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 25px;
+            display: block;
+            opacity: 0.9;
+        }
+        body {
+            background-color: #b9f8d5e6;
+            background-image: url(https://limbuscompany.wiki.gg/images/Story_WARP_Train_Economy_Class_Cabin_1_BG.png?5d69c8=&format=original);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        #prof_pic {
+            margin-bottom: 40px;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .form-control {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
+        <ul>
+            <li><a href="#home">Motorcycles</a></li>
+            <li><a href="#matri">Fare Matrix</a></li>
+        </ul>
+        <div class="ms-auto pe-3">
+            <button type="button" class="btn btn-success" onclick="window.location.reload()">Refresh</button>
+        </div>
+    </nav>   
+
+    <div class="Shoe">
+        <h1>Registration!</h1>
+        <details ontoggle="Recomend()">
+            <summary>How to register</summary>
+            <br>
+            <i id="message"></i>
+        </details>
+        <br>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWnW0NUpcrZcGZeUJ4e50ZLU8ugS9GPPoqww&s" id="prof_pic">
+        <br>
+        
+        <button type="button" class="btn btn-success mb-3" onclick="bread_1()">Upload photo</button>
+        
+        <form id="registrationForm">
+            <input type="file" class="form-control" id="Darvine">
+            
+            <label for="fname">Username:</label>
+            <input type="text" id="fname" name="fname" class="form-control" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" class="form-control" required>
+            
+            <label for="Age">Age:</label>
+            <input type="number" id="Age" name="Age" class="form-control">
+            
+            <label for="numba">Contact number:</label>
+            <input type="text" id="numba" name="numba" class="form-control">
+            
+            <p>Description:</p>
+            <textarea name="message" class="form-control" rows="3"></textarea>
+            <br>
+            <button type="button" class="btn btn-success w-100" onclick="handleRegistration()">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        function Recomend() {
+            document.getElementById("message").innerHTML = "Please answer the form to finish the registration.";
+        }
+
+        function bread_1() {
+            alert("Jeremiah");
+            document.getElementById("prof_pic").src = "Kurt.jpg";
+        }
+
+        function handleRegistration() {
+                window.location.href = 'Sign.html';
+        }
+    </script>
+</body>
+</html>
