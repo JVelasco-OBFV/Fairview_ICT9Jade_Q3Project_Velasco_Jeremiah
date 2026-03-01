@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Indie+Flower&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Questrial&family=Russo+One&display=swap" rel="stylesheet">
+    <style>
+        body{
+            background: url('https://media.philstar.com/photos/2019/05/25/met1-edsa-traffics-mrt-rudysantos_2019-05-25_20-51-25.jpg');
+            background-size: cover;
+        }
+        #register{
+            background-color: rgb(32, 32, 72);
+            padding: 30px;
+            height: auto;
+            margin-top: 100px;
+            border-radius: 40px;
+            color: white;
+            margin-bottom: 40px;
+            margin-right: 500px;
+            margin-left: 100px;
+        }
+        #contactus{
+            background-color: rgb(32, 32, 72);
+            padding: 30px;
+            height: auto;
+            margin-top: 100px;
+            border-radius: 40px;
+            color: white;
+            margin-bottom: 40px;
+            margin-right: 100px;
+            margin-left: 500px;
+        }
+        #heading{
+            color: rgb(255, 228, 56);
+            border-radius: 10px;
+            font-family: Questrial, sans;
+            text-align: left;
+        }
+        #heading2{
+            color: rgb(255, 228, 56);
+            border-radius: 10px;
+            font-family: Questrial, sans;
+            text-align: right;
+        }
+        #img{
+            background: url('https://pia.gov.ph/wp-content/uploads/2025/03/PSA-brings-civil-registration-services-closer-to-Lanao-del-Sur-residents-1.jpeg');
+            background-size: cover;
+            border-radius: 40px;
+            font-family: Questrial, sans;
+            text-align: left;
+            height: auto;
+            width: auto;
+        }
+        #img:hover{
+            box-shadow: 0 0 4px 2px rgba(255, 255, 255, 0.5);
+            transition: box-shadow 0.4s;
+        }
+        #img-contact{
+            background: url('https://dam.mediacorp.sg/image/upload/s--f_tfsQQ---/f_auto,q_auto/c_fill,g_auto,h_622,w_830/v1/tdy-migration/20180205_smrtconnect_mf02.jpg?itok=oUvSerkf');
+            background-size: cover;
+            border-radius: 40px;
+            font-family: Questrial, sans;
+            text-align: left;
+            height: auto;
+        }
+        #img-contact:hover{
+            box-shadow: 0 0 4px 2px rgba(255, 255, 255, 0.5);
+            transition: box-shadow 0.4s;
+        }
+        #form1{
+            background-color: blue;
+            padding: 40px;
+            border-radius: 40px;
+            text-align: center;
+            width: 700px;
+        }
+        #contact{
+            text-align: right;
+        }
+        p, textarea, details, summary, i{
+            font-family: Funnel Display, sans;
+        }
+    </style>
+</head>
+<body>
+        <div class="row d-flex" id="register">
+            <div class="col-3 mb-5 mt-5 me-2 flex-fill">
+                <h1 id="heading"><b>Registration</b></h1>
+                <br>
+                <details ontoggle="int1()">
+                    <summary>
+                        <u>Register via Online Account</u>
+                    </summary>
+                    <br>
+                    <i id="int1"></i>
+                    <br>
+                    <i id="int2"></i>
+                    <br>
+                    <i id="int3"></i>
+                    <br>
+                    <i id="int4"></i>
+                </details>
+                <br>
+                <details ontoggle="int2()">
+                    <summary>
+                        <u>Register via LRT-2</u>
+                    </summary>
+                    <br>
+                    <i id="int11"></i>
+                    <br>
+                    <i id="int22"></i>
+                    <br>
+                    <i id="int33"></i>
+                    <br>
+                    <i id="int44"></i>
+                </details>
+                <br>
+                <details ontoggle="int3()">
+                    <summary>
+                        <u>Register via RFID</u>
+                    </summary>
+                    <br>
+                    <i id="int111"></i>
+                    <br>
+                    <i id="int222"></i>
+                    <br>
+                    <i id="int333"></i>
+                    <br>
+                    <i id="int444"></i>
+                </details>
+            </div>
+            <div class="col-3 mb-5 mt-5 me-2 flex-fill" id="img"></div> 
+        </div>
+
+        <div class="row d-flex" id="contactus">
+            <div class="col-3 mb-5 mt-5 me-2 flex-fill" id="img-contact"></div>
+            <br>
+            <div class="col-3 mb-5 mt-5 me-2 flex-fill" id="contact">
+                <h1 id="heading2"><b>Contact for Inquiry</b></h1>
+                <br>
+                <p>Phone Number: +63 0XXXXXX</p>
+                <p>Email: inquire.fareview@gmail.com</p> <!--PLACEHOLDER/ NOT ACTUAL EMAIL-->
+                <form action="">
+                <textarea name="feedback" id="feedback" rows="7" class="form-control" placeholder="Any feedback or inquiry we would like to accomodate?"></textarea>
+                <br>
+                <button class="btn btn-warning" style="font-family: Funnel Display, sans;" type="submit" onclick="redirectory()">Submit</button>
+                </form>
+            </div>
+        </div>
+        
+    <script>
+        function int1() {
+            document.getElementById("int1").innerHTML="1. Create an Account"
+            // conceptualized details
+            document.getElementById("int2").innerHTML="2. Navigate to the 'Promo' page"
+            document.getElementById("int3").innerHTML="3. Fill up the form to register a pass (Seniors, PWD, and Students gain default discount)"
+            document.getElementById("int4").innerHTML="4. Once registered, claim your pass at the nearby Fareview Loading station"
+        }
+        function int2() {
+            // placeholder
+            document.getElementById("int11").innerHTML="1. (TBA)"
+            document.getElementById("int22").innerHTML="2. (TBA)"
+            document.getElementById("int33").innerHTML="3. (TBA)"
+            document.getElementById("int44").innerHTML="4. (TBA)"
+        }
+        function int3() {
+            // placeholder
+            document.getElementById("int111").innerHTML="1. (TBA)"
+            document.getElementById("int222").innerHTML="2. (TBA)"
+            document.getElementById("int333").innerHTML="3. (TBA)"
+            document.getElementById("int444").innerHTML="4. (TBA)"
+        }
+        function redirectory() {
+            window.alert('Your concern has been acknowledged. Thank you for your cooperation :>')
+        }
+    </script>
+</body>
+</html>
