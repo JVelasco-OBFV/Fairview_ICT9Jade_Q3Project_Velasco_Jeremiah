@@ -26,6 +26,27 @@
         ul li a:hover {
             background-color: #606e85;
         }
+        .footer{
+		    position: fixed;
+	        left: 0;
+		    bottom: 0;
+		    width: 100%;
+            background-color: black;
+		    color: rgb(255, 255, 255);
+		    padding-top: 7px;
+		    padding-bottom: 7px;
+            opacity: 0.6;
+		
+		    text-align: center;
+		    font-size: 19px;
+	    }
+		a, p, h1, option, label{
+			font-family: Gill Sans MT;
+		}
+		#logo{
+   	 		width: 100px;
+    		height: 60px; 
+		}
 
         /* Background and Body */
         body {
@@ -91,16 +112,39 @@
 </head>
 <body>
     
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
-        <ul>
-            <li><a href="index.html">Motorcycles</a></li>
-            <li><a href="#matrix">Fare Matrix</a></li>
-            <li><a href="am.html">Register</a></li>
-        </ul>
-        <div class="ms-auto pe-3">
-            <button type="button" class="btn btn-success" onclick="window.location.reload()">Refresh</button>
-        </div>
-    </nav> 
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: rgb(32, 32, 72)";> 
+  <div class="container-fluid">
+    <a href="/" class="nav-logo">
+    <img src="FareView.png" id="logo" alt="Company Logo">
+  </a>
+    <a class="navbar-brand" href=""><img src="" alt="" class=""></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mynavbar">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="farematrix.html">Fare Matrix</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Schedule</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="help.html">Help</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Register.html">Create Account</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+      </form>
+    </div>
+  </div>
+</nav>
+    <br><br> 
 
     <div class="table-container">
         <h2>Local ride times near you</h2>
@@ -195,6 +239,11 @@
             </tbody>
         </table>
     </div>
+
+    <br>
+    <div class="footer">
+		<p>Velasco, Floro, and Abellar | 9-Jade @2026</p>
+	</div>
 
     <script>
         function Recomend() {
