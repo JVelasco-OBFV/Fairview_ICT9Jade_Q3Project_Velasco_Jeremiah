@@ -20,17 +20,14 @@
             border: 8px solid #ffffff;
             padding: 5px;
             box-shadow: 0 0 4px 2px rgba(27, 27, 27, 0.5);
-        }
-        #image{
-            width: 270px;
-            height: 375px;
-            margin-top: 25px;
+            opacity: 1.0;
         }
         #fare{
             background-color: rgb(32, 32, 72);
             border-radius: 40px;
             color: white; 
             padding: 50px;
+            opacity: 1.0;
         }
         #price{
             background-color: rgb(32, 32, 72);
@@ -38,12 +35,14 @@
             color: white; 
             padding: 50px;
             margin-right: 40px;
+            opacity: 1.0;
+            text-align: center;
         }
         #heading{
             background-color: rgb(132, 191, 255);
             color: rgb(255, 228, 56);
             border-radius: 10px;
-            font-family: Questrial, sans;
+            font-family: Montserrat, sans;
         }
         select, label{
             font-family: Funnel Display, sans;
@@ -51,16 +50,18 @@
         .btn-outline-warning, .btn-outline-primary{
             font-family: Funnel Display, sans;
         }
-        .d-flex{
-            margin-top: 70px;
+        #wholecalc{
+            background-color: rgb(0, 102, 211);
+            border-radius: 30px;
+            margin: 80px;
         }
     </style>
 </head>
 <body>
-    <div class="row d-flex">
+    <div class="row d-flex" id="wholecalc">
         <div class="col-1 text-center me-2 mt-5 mb-5 flex-fill" id="map"></div>
         <div class="col-3 text-center mb-5 mt-5 me-2 flex-fill" id="fare">
-        <h1 id="heading"><b>Fare Calculation</b></h1>
+        <h1 id="heading"><b>FairCalc</b></h1>
         <br>
             <label style="font-size: 20px;"><b>Origin</b></label>
             <select name="pickup" id="pickup" class="form-select">
@@ -98,27 +99,28 @@
 				<option value="17.6">Antipolo</option>
             </select>
             <br>
-            <input type="checkbox" id="disc" name="disc" class="form-check-input">
-			<label for="discounted" id="dis" class="form-check-label">Discount</label>
+            <input type="checkbox" id="disc" name="disc" class="form-check-input bg-warning">
+			<label for="discounted" id="dis" class="form-check-label">20% Discount for Scholarship, PWD, and Senior Citizens</label>
             <br><br>
 
-            <button class="btn btn-outline-warning" type="button" onclick="calculateFare()">Regular Fare</button>
+            <button class="btn btn-outline-warning" type="button" onclick="fairCalc()" style="font-family: Funnel Display, sans;">Regular Fare</button>
         </div>
 
         <div class="col-1 text-center mb-5 mt-5 flex-fill" id="price">
             <p style="font-size: 45px; font-family: Funnel Display, sans;">Fare</p>
             <br><br>
-            <h1 style="font-size: 75px; font-family: Funnel Display, sans;" id="DisplayAns">P0.00</h1>
+            <h1 style="font-size: 65px; font-family: Funnel Display, sans;" id="DisplayAns">P0.00</h1>
         </div>
     </div>
     <br>
 
     <script>
         // fare
-        function calculateFare() {
+        function fairCalc() {
             let pickup, dropoff, basefare, baseKM, perKMrate, distance, extraKM, discount;
                 pickup = parseFloat(document.getElementById('pickup').value);
                 dropoff = parseFloat(document.getElementById('dropoff').value);
+
                 basefare = 50;
                 perKMrate = 15;
                 baseKM = 2;
@@ -127,17 +129,17 @@
                 distance = Math.max(Math.abs(dropoff - pickup), 0);
                 extraKM = Math.max(distance - baseKM, 0);
 
-            if (distance > 1) {
+                if (distance > 1) { // enable fare value be equivalent to 0 if calculating the 
+                // same location
                 fare = basefare + extraKM * perKMrate;
-            } else {
+                } else {
                 fare = 0;
-            }
+                }
 
-            fare = fare * (1 - 0.2 * discount)
+            fare = fare * (1 - 0.2 * discount)// discounted only when box is checked
                 document.getElementById('DisplayAns').innerHTML= 'P' + fare.toFixed(2);
         }
         
     </script>
 </body>
-
 </html>
