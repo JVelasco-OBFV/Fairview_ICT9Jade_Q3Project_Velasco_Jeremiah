@@ -12,6 +12,24 @@
             padding: 0;
             overflow: hidden;
         }
+		.footer{
+		    position: fixed;
+	        left: 0;
+		    bottom: 0;
+		    width: 100%;
+            background-color: black;
+		    color: rgb(255, 255, 255);
+		    padding-top: 7px;
+		    padding-bottom: 7px;
+            opacity: 0.6;
+		
+		    text-align: center;
+		    font-size: 19px;
+	    }
+		#logo{
+   	 		width: 100px;
+    		height: 60px; 
+		}
         ul li {
             float: left;
         }
@@ -68,10 +86,10 @@
           <a class="nav-link" href="index.html">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Fare Matrix</a>
+          <a class="nav-link" href="farematrix.html">Fare Matrix</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Schedule</a>
+          <a class="nav-link" href="Schedule.html">Schedule</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="help.html">Help</a>
@@ -95,12 +113,17 @@
         <h3>We hope you have an excellent time using FareView!</h3>
     </div>
 
+	<br>
+	<div class="footer">
+		<p>Velasco, Floro, and Abellar | 9-Jade @2026</p>
+	</div>
+
     <script>
         function Recomend() {
             document.getElementById("message").innerHTML = "Please answer the form to finish the registration.";
         }
         function bread_1() {
-            alert("Jeremiah");
+            alert("Photo Uploaded");
             document.getElementById("prof_pic").src = "Kurt.jpg";
         }
     </script>
