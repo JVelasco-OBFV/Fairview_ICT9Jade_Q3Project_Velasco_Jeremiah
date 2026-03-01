@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FareView - Schedule</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Navbar Styles */
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        ul li {
+            float: left;
+        }
+        ul li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        ul li a:hover {
+            background-color: #606e85;
+        }
+
+        /* Background and Body */
+        body {
+            background-color: #b9f8d5e6;
+            background-image: url(https://limbuscompany.wiki.gg/images/Story_WARP_Train_Economy_Class_Cabin_1_BG.png?5d69c8=&format=original);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Centering Container for the Table */
+        .table-container {
+            max-width: 800px; /* Limits the width to make it smaller */
+            margin: 50px auto; /* Centers the container and adds spacing from top */
+            padding: 20px;
+            background-color: rgba(30, 64, 201, 0.9); /* Matching your theme with transparency */
+            border: 5px solid #1900ffcb;
+            border-radius: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        h2 {
+            text-align: center;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        /* Table Styles */
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: center; /* Centered text inside cells */
+            padding: 10px;
+        }
+
+        tr:nth-child(odd) {
+            background-color: #25369a;
+        }
+
+        tr:nth-child(even) {
+            background-color: #665ad4;
+        }
+
+        th, td {
+            color: #dddddd;
+            font-weight: bold;
+        }
+
+        .transfer {
+            font-size: 0.8em;
+            font-weight: normal;
+            display: block;
+            color: #ffeb3b;
+        }
+    </style>
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
+        <ul>
+            <li><a href="index.html">Motorcycles</a></li>
+            <li><a href="#matrix">Fare Matrix</a></li>
+            <li><a href="am.html">Register</a></li>
+        </ul>
+        <div class="ms-auto pe-3">
+            <button type="button" class="btn btn-success" onclick="window.location.reload()">Refresh</button>
+        </div>
+    </nav> 
+
+    <div class="table-container">
+        <h2>Local ride times near you</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Place Name</th>
+                    <th>Early Rides</th>
+                    <th>Late (East)</th>
+                    <th>Late (West)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Recto</td>
+                    <td>5:00 AM</td>
+                    <td>9:30 PM</td>
+                    <td>--</td>
+                </tr>
+                <tr>
+                    <td>Legarda</td>
+                    <td>5:00 AM</td>
+                    <td>9:35 PM</td>
+                    <td>9:25 PM</td>
+                </tr>
+                <tr>
+                    <td>Pureza</td>
+                    <td>5:00 AM</td>
+                    <td>9:38 PM</td>
+                    <td>9:22 PM</td>
+                </tr>
+                <tr>
+                    <td>V. Mapa</td>
+                    <td>5:00 AM</td>
+                    <td>9:42 PM</td>
+                    <td>9:18 PM</td>
+                </tr>
+                <tr>
+                    <td>J. Ruiz</td>
+                    <td>5:00 AM</td>
+                    <td>9:45 PM</td>
+                    <td>9:15 PM</td>
+                </tr>
+                <tr>
+                    <td>Gilmore</td>
+                    <td>5:00 AM</td>
+                    <td>9:48 PM</td>
+                    <td>9:12 PM</td>
+                </tr>
+                <tr>
+                    <td>Betty Go-Belmonte</td>
+                    <td>5:00 AM</td>
+                    <td>9:51 PM</td>
+                    <td>9:09 PM</td>
+                </tr>
+                <tr>
+                    <td>Araneta-Cubao<br><span class="transfer">Transfer: MRT-3</span></td>
+                    <td>5:00 AM</td>
+                    <td>9:55 PM</td>
+                    <td>9:05 PM</td>
+                </tr>
+                <tr>
+                    <td>Anonas</td>
+                    <td>5:00 AM</td>
+                    <td>9:59 PM</td>
+                    <td>9:01 PM</td>
+                </tr>
+                <tr>
+                    <td>Katipunan</td>
+                    <td>5:00 AM</td>
+                    <td>10:03 PM</td>
+                    <td>8:57 PM</td>
+                </tr>
+                <tr>
+                    <td>Santolan</td>
+                    <td>5:00 AM</td>
+                    <td>10:07 PM</td>
+                    <td>8:53 PM</td>
+                </tr>
+                <tr>
+                    <td>Marikina-Pasig</td>
+                    <td>5:00 AM</td>
+                    <td>10:10 PM</td>
+                    <td>8:50 PM</td>
+                </tr>
+                <tr>
+                    <td>Antipolo</td>
+                    <td>5:00 AM</td>
+                    <td>--</td>
+                    <td>9:00 PM</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        function Recomend() {
+            document.getElementById("message").innerHTML = "Please answer the form to finish the registration.";
+        }
+        function bread_1() {
+            alert("Jeremiah");
+            document.getElementById("prof_pic").src = "Kurt.jpg";
+        }
+    </script>
+</body>
+</html>
