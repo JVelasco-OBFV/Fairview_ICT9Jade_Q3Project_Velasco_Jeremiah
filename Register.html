@@ -11,10 +11,13 @@
    	 		width: 100px;
     		height: 60px; 
 		}
-		}
-        a, p, h1, h2, option, label{
+		
+        a, p, h1, h2, summary, i{
             font-family: Questrial, sans;
         }
+		input, label, textarea{
+			font-family: Funnel Display, sans;
+		}
         .footer{
 		    position: fixed;
 	        left: 0;
@@ -29,9 +32,6 @@
 		    text-align: center;
 		    font-size: 19px;
 	    }
-		a, p, h1, option, label{
-			font-family: Gill Sans MT;
-		}
         .Shoe {
             text-align: center;
             max-width: 1000px;
@@ -117,10 +117,10 @@
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWnW0NUpcrZcGZeUJ4e50ZLU8ugS9GPPoqww&s" id="prof_pic">
         <br>
         
-        <button type="button" class="btn btn-success mb-3" onclick="bread_1()">Upload photo</button>
+        <button type="button" class="btn btn-success mb-3" onclick="bread_1()" style:"font-family: Funnel Display, sans;">Upload Photo</button>
         
         <form id="registrationForm">
-            <input type="file" class="form-control" id="Darvine">
+            <input type="file" class="form-control" id="Darvine" style:"font-family: Funnel Display, sans;">
             
             <label for="fname">Username:</label>
             <input type="text" id="fname" name="fname" class="form-control" placeholder="Create Name..." required>
@@ -138,9 +138,9 @@
             <input type="text" id="numba" name="numba" class="form-control" placeholder="+63 XXXXXX" required>
             
             <p>Description:</p>
-            <textarea name="message" class="form-control" rows="3"></textarea>
+            <textarea name="message" class="form-control" rows="3" placeholder="Write a detailed description here..."></textarea>
             <br>
-            <button type="button" class="btn btn-success w-100" onclick="handleRegistration()">Submit</button>
+            <button type="button" class="btn btn-success w-100" onclick="handleRegistration()" style:"font-family: Funnel Display, sans;">Submit</button>
         </form>
     </div>
 	<br>
